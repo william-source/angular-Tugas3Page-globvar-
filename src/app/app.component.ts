@@ -20,10 +20,5 @@ halamanI(){
 halamanL(){
  this.router.navigate(['/halamanlist']); 
 }
-halamanE(){
- this.router.navigate(['/halamanedit']); 
-}
-
-
 
 }

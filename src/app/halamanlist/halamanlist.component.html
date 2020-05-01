@@ -1,7 +1,11 @@
-<ul>
   <h1>HALAMAN LIST</h1>
+<ul>
   <li *ngFor="let data of datadariglob">
   Nama Jurusan = {{data.namajurusan}}<br>  
-  Penjelasan Jurusan = {{data.penjelasanjurusan}}<br><br>  
-  <li>
+  Penjelasan Jurusan<br>
+  <textarea rows="10" cols="50" disabled="true">
+  {{data.penjelasanjurusan}}
+  </textarea><br>
+  <button (click)="Edit(data.id)">Edit</button>  
+  <li><br>
 </ul>

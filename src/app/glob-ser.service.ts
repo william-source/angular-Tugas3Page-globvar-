@@ -2,7 +2,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GlobSerService {
+  noid = 1;
+  datatambah : any
+
   private Data= [{
+    id  : 0,
     namajurusan : 'infor',
     penjelasanjurusan : 'infor'
   }];
@@ -10,15 +14,20 @@ export class GlobSerService {
   public getData(){
     return this.Data;
   }
-  public setData(databaru){
-    this.Data = databaru;
-  }
-  public updateData(databaru,namajurusan){
-    if(namajurusan=this.getData())
-    {
-      this.Data = databaru
+  public addData(najur:String , penjur:String){
+    this.datatambah={
+      id : this.noid,
+      namajurusan : najur,
+      penjelasanjurusan : penjur
     }
+  this.noid++;
+  this.Data.push(this.datatambah);
   }
+
+  public updateData(dataupdate){
+    this.Data = dataupdate;
+  }
+
 
   constructor() { }
 

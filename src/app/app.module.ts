@@ -13,7 +13,7 @@ import { HalamaneditComponent } from './halamanedit/halamanedit.component';
 const ROUTES:Routes =[
   {path:'halamaninput',component : HalamaninputComponent},
   {path:'halamanlist',component : HalamanlistComponent},
-  {path:'halamanedit',component : HalamaneditComponent}
+  {path:'halamanedit/:id',component : HalamaneditComponent},
 ]
 
 
